@@ -6,5 +6,5 @@
  */
 
 let promise = new Promise((fulfilled, rejected) => {
-    setTimeout(fulfilled('FULFILLED!'), 300);
+    setTimeout(() => fulfilled('FULFILLED!'), 300);
 }).then(fulfilled => console.log(fulfilled));
