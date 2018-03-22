@@ -3,8 +3,8 @@
  */
 
 let promise = new Promise((resolve, reject) => {
-    setTimeout(() => resolve(`RESOLVE: This worked`));
-    setTimeout(() => reject(`REJECT: This also worked`));
+    setTimeout(() => resolve(`RESOLVE: This worked`), 200);
+    setTimeout(() => reject(`REJECT: This also worked`), 300);
 });
 
 promise
@@ -15,4 +15,7 @@ let resolved = Promise.resolve('SUCCESS');
 let rejected = Promise.reject('FAILURE');
 
 resolved.then(console.log);
-rejecte.catch(console.log);
+rejected.catch(console.log);
+
+resolved.then(console.log);
+rejected.catch(console.log);

@@ -7,4 +7,5 @@
 
 let promise = new Promise((fulfilled, rejected) => {
     setTimeout(() => fulfilled('FULFILLED!'), 300);
-}).then(fulfilled => console.log(fulfilled));
+}).then(fulfilled => console.log(fulfilled))
+.catch(rejected => console.log);

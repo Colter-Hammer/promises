@@ -7,7 +7,7 @@ let myPromise = new Promise((resolve, reject) => {
     setTimeout(() => reject(new Error('REJECTED!')), 300);
 });
 
-myPromise.then(null, (reject) => {
+myPromise.catch(reject => {
     onReject(reject);
 })
 
